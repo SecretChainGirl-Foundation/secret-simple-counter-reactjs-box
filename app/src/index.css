@@ -37,3 +37,10 @@ a{
   font-weight: 400;
   src: url('./fonts/Hurley1967Script.otf');
 }
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./fonts/SourceSansPro.ttf');
+}
