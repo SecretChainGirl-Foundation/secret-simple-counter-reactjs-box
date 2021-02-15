@@ -44,3 +44,12 @@ a{
   font-weight: 400;
   src: url('./fonts/SourceSansPro.ttf');
 }
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./fonts/PoppinsRegular.ttf');
+}
+
+

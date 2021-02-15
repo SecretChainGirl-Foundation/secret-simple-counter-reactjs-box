@@ -1,52 +1,45 @@
 import React from 'react';
-import './App.css';
 import { Route, withRouter, RouteComponentProps } from "react-router-dom";
-
-import discordIcon from "./Assets/discord.svg"
-import telegramIcon from "./Assets/telegram.svg"
-import youtubeIcon from "./Assets/youtube.svg"
-import twittIcon from "./Assets/twitt.svg"
-import logoIcon from "./Assets/logo.svg"
-
-interface MatchParams {
-  type: string;
-}
-
-interface MatchProps extends RouteComponentProps<MatchParams> { }
+import cx from "classnames";
+import { css } from "@emotion/css";
+import Header from './Containers/Header';
+import Home from './Containers/Home';
+import Counter from './Containers/Counter';
+import { useTranslation } from 'react-i18next';
 
 function App() {
 
+  const { t, i18n } = useTranslation();
+
+  React.useEffect(() => {
+    try {
+      const language = localStorage.getItem('language') || 'en'
+      i18n.changeLanguage(language)
+    } catch (error) { }
+
+  }, []);
+
   return (
-    <div className="App">
+    <div className={cx(css`color: #282828;
+      height: 100vh;
+      width: 100%;
+      font-family: Gobold Bold;
+      background-color: #F8D948;
+    `)}>
 
-      <div className="Header">
-        <img src={logoIcon} width={48} height={48} />
-        <div className="LinksContainer">
-          <div><a href="#">Boxes</a></div>
-          <div><a href="#">SCG Foundation</a></div>
-          <div><a href="#">About</a></div>
-          {/* <div className="EssentialLinksTitle">
-            <div>Essential Links</div>
-            <div className="EssentialLinksContainer">
-              <div><a href="#">Core Docs</a></div>
-              <div><a href="#">Forum</a></div>
-              <div><a href="#">News</a></div>
-            </div>
-          </div> */}
-          <div><a href="#">Docs</a></div>
-        </div>
-
-        <div className="SocialContailer">
-          <a href="#"><img width="20px" src={discordIcon} /></a>
-          <a href="#"><img width="20px" src={telegramIcon} /></a>
-          <a href="#"><img width="20px" src={youtubeIcon} /></a>
-          <a href="#"><img width="20px" height={17} src={twittIcon} /></a>
-        </div>
-
-      </div>
-
-      <div className="Container">
-
+      <Header />
+      <div className={cx(css`display: flex;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        box-sizing: border-box;
+        position: relative;
+        padding-top:100px;
+        height: 100%;
+        
+      `)}>
+        <Route exact path={"/"}><Home /></Route>
+        <Route exact path={"/counter"}><Counter /></Route>
       </div>
 
     </div>
