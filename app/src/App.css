@@ -1,60 +1,60 @@
 .App {
-  color: #070707;
+  color: #282828;
   height: 100vh;
   width: 100%;
   font-family: Gobold Bold;
-  
+  background-color: #F8D948;
+}
+
+.Header{
+  width: 100%;
+  font-family: Source Sans Pro;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+  box-shadow: 0px 8px 16px rgba(17, 17, 17, 0.06);
+  padding: 0 140px;
+  box-sizing: border-box;
+}
+
+.LinksContainer{
+  display: flex;
+}
+
+.LinksContainer > div{
+  margin-left: 100px;
+}
+
+.SocialContailer{
+  display: flex;
+}
+
+.SocialContailer img{
+  margin-left: 30px;
+  opacity: 1;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.SocialContailer img:hover{
+  opacity: .7;
 }
 
 .Container {
   display: flex;
-  color: #070707;
-  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background: url('./Assets/background.png') no-repeat;
-  background-size: 100% 100%;
-  min-height: 600px;
-  min-width: 900px;
   padding: 40px 100px;
   box-sizing: border-box;
   position: relative;
 }
 
-.Header{
-  width: 100%;
-  color: #F8D948;
-  font-family: Gobold High;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 144px;
-  line-height: 180px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.Header > span:first-child{
-  margin-right: 30px;
-  margin-bottom: 80px;
-}
-
-.LinksContainer{
-  font-family: Gobold Bold;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 21px;
-  color: #000000;
-  min-height: 300px;
-  margin-left: 20px;
-
-}
-
-.LinksContainer > div{
-  padding-bottom: 20px;
-}
 
 .EssentialLinksContainer{
   background-color: #e2d7a5;
@@ -91,33 +91,8 @@
   margin-top: 20px;
 }
 
-.Footer{
-  display: flex;
-  justify-content: space-between;
-  font-family: Hurley;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 21px;
-  line-height: 25px;
-  flex-direction: row;
-}
 
-.SocialContailer{
-  display: flex;
-}
 
-.SocialContailer img{
-  margin-right: 20px;
-  opacity: 1;
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
-
-.SocialContailer img:hover{
-  margin-right: 20px;
-  opacity: .7;
-
-}
 
 .glower{
   width: 15%;
